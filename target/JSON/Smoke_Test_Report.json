@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 765863100,
+              "duration": 1023822700,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 4145893100,
+              "duration": 4165086000,
               "status": "passed"
             },
             "match": {
@@ -34,29 +34,38 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 4133815600,
+              "status": "passed"
             },
             "line": 24,
             "name": "I am on home page of packt application",
-            "match": {},
+            "match": {
+              "location": "PacktHomePageSteps.iAmOnHomePageOfPacktApplication()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 277300,
+              "status": "passed"
             },
             "line": 25,
             "name": "I verify the elements on homepage",
-            "match": {},
+            "match": {
+              "location": "PacktHomePageSteps.iVerifyTheElementsOnHomepage()"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 158400,
+              "status": "passed"
             },
             "line": 26,
             "name": "verification should be successfull",
-            "match": {},
+            "match": {
+              "location": "PacktHomePageSteps.verificationShouldBeSuccessfull()"
+            },
             "keyword": "Then "
           }
         ],

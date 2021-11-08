@@ -75,6 +75,7 @@ public class Configuration {
 		driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(properties.getProperty("URL"));
+		driver.manage().window().maximize();
 	}
 	
 	public WebDriverWait getWait(WebDriver driver,int waitTimer) {

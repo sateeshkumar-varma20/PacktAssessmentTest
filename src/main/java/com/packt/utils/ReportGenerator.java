@@ -101,7 +101,7 @@ public class ReportGenerator {
 	public void info(String log_message, boolean take_screenshot) {
 		try {
 			if (take_screenshot) {
-				String screenshotPath = takeScreenShot(config.getDriver());
+				String screenshotPath = takeScreenShot(driver);
 				System.out.println("INFO: " + log_message);
 				childTest.log(Status.INFO, log_message, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
 

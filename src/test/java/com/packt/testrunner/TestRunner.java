@@ -16,7 +16,7 @@ import cucumber.api.java.Before;
 @CucumberOptions(snippets = SnippetType.CAMELCASE,
 
 				plugin = { "json:target/JSON/Smoke_Test_Report.json" }, 
-				glue = {"com.packt.testrunner" }, 
+				glue = {"com.packt" }, 
 				monochrome = true,
 				dryRun = false, 
 				tags = { "@tag1" }, 
