@@ -1,0 +1,89 @@
+[
+  {
+    "line": 20,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 765863100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestRunner.setUpReporting(Scenario)"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "Verify that all the elements on the page are correct",
+        "description": "",
+        "id": "packt-assessment-sateesh-varma;verify-that-all-the-elements-on-the-page-are-correct",
+        "after": [
+          {
+            "result": {
+              "duration": 4145893100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestRunner.endSession()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 24,
+            "name": "I am on home page of packt application",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 25,
+            "name": "I verify the elements on homepage",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 26,
+            "name": "verification should be successfull",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@tag1"
+          }
+        ]
+      }
+    ],
+    "name": "Packt Assessment Sateesh Varma",
+    "description": "",
+    "id": "packt-assessment-sateesh-varma",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature",
+    "tags": [
+      {
+        "name": "@tag",
+        "type": "Tag",
+        "location": {
+          "line": 19,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
