@@ -10,7 +10,6 @@ import org.codehaus.plexus.util.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-//import org.testng.annotations.Optional;
 import org.testng.Assert;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -22,18 +21,15 @@ import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.packt.helperapis.Configuration;
 
-
-//import cucumber.api.Scenario;
+/*
+ * This a singleton class to provide reporting utility to the framework.
+ */
 
 public class ReportGenerator {
 
 	 ExtentTest parrentTest;
 	 ExtentReports extentReport;
-//	public static final String PASS = "Pass";
-//	public static final String FAIL = "Fail";
-//	public static final String ERROR = "Error";
-//	public static final String INFO = "Info";
-//	public static final String WARNING = "Warning";
+
 	private  WebDriver driver;
 	private  String newReportFileName = "";
 	

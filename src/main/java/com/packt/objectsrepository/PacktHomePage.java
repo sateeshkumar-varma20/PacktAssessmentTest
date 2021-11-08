@@ -1,6 +1,12 @@
 package com.packt.objectsrepository;
 
-public class PacktHomePage {
+import com.packt.helperapis.ExtendedSeleniunApi;
+/*
+ * This the page object class for HomePage of the application. 
+ * This class has all the elements of the homepage and their action methods.
+ */
+
+public class PacktHomePage extends ExtendedSeleniunApi {
 
 	final String MAIN_LOGO_ID = "main-logo";
 	final String TOP_SEARCH_BAR_XPATH = "//input[@class='search-bar__input']";
@@ -9,6 +15,8 @@ public class PacktHomePage {
 	final String ACCOUNT_MENU_XPATH = "//li[@class='menu__item']//span[contains(text(),'Account')]" ;
 	final String READ_NOW_BUTTON_XPATH = "//button[text()='Read now']";
 	final String CHAPTERS_LIST_XPATH = "//div[starts-with(@class,'chapterList shadow')]";
+	
+	final String LOGOUT_LIST_BUTTON_XPATH = "//li[text()='Logout']";
 	
 	
 	public String getMAIN_LOGO_ID() {
@@ -32,6 +40,19 @@ public class PacktHomePage {
 	public String getCHAPTERS_LIST_XPATH() {
 		return CHAPTERS_LIST_XPATH;
 	}
+	public String getLOGOUT_LIST_BUTTON_XPATH() {
+		return LOGOUT_LIST_BUTTON_XPATH;
+	}
 	
+	
+	
+	
+	public void clickAccountMenu() {
+		clickOnElement(getWebElementByXpath(ACCOUNT_MENU_XPATH), "Account Menu",true);
+	}
+	
+	public void clickLogOut() {
+		clickOnElement(getWebElementByXpath(LOGOUT_LIST_BUTTON_XPATH), "Logout");
+	}
 	
 }

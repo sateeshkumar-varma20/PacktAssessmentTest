@@ -1,11 +1,9 @@
 package com.packt.testrunner;
 
-import org.testng.annotations.AfterClass;
-
+import com.packt.cucumber.CustomAbtractBaseTestNGCucumber;
 import com.packt.helperapis.Configuration;
 import com.packt.helperapis.StartUp;
 import com.packt.utils.ReportGenerator;
-import com.packt.cucumber.CustomAbtractBaseTestNGCucumber;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.Scenario;
@@ -29,6 +27,10 @@ public class TestRunner extends CustomAbtractBaseTestNGCucumber {
 	private Configuration config =  Configuration.getConfigurationInstance();
 	private StartUp start = null;
 	
+	/*
+	 * This Method will be executed before each scenario in feature file.
+	 * This method ill set up the reporting based on Feature and Scenario name.
+	 */
 	@Before
 	public void setUpReporting(Scenario scenario) throws InterruptedException, Exception {
 		
@@ -44,19 +46,20 @@ public class TestRunner extends CustomAbtractBaseTestNGCucumber {
 		String scenarioName = scenario.getName();
 		reporter.startTest("<u><b>" + scenarioName + "</b></u>");
 		start= new StartUp();
-		start.loginToPacktApplication(config.properties.getProperty("USER_NAME"), config.properties.getProperty("PASSWORD"));
+		start.loginToPacktApplication(config.properties.getProperty("URL"),
+				config.properties.getProperty("USER_NAME"), 
+				config.properties.getProperty("PASSWORD"));
 	}
 	
 
-	
+	/*
+	 * This will be executed after each scenario in feature file.
+	 * This will fludh all the reporting of the scenario to html file and logout.
+	 */
 	@After
 	public void endSession() throws InterruptedException {
-		config.driver.close();
-		
+        start.logOut();
+        reporter.endTest();
 	}
 
-//	@AfterClass
-//	public void closeSetup() throws Exception {
-//		reporter.closeReport();
-//	}
 }

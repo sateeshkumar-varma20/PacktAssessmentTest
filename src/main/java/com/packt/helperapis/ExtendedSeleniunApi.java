@@ -8,7 +8,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.packt.utils.ReportGenerator;
-
+/*
+ * This class provides extended api to our framework by providing methods to deal with elements that handles expects and reporting as well.
+ */
 
 public class ExtendedSeleniunApi{
 	private Configuration config = Configuration.getConfigurationInstance();
@@ -20,7 +22,7 @@ public class ExtendedSeleniunApi{
 	 * This method is used to perform the click functionality on the given
 	 * element
 	 * 
-	 * @param element
+	 * @param element, element name and optional parameter to take screenshot(by default it is false.
 	 */
 	public void clickOnElement(WebElement element, String elementName, boolean... takesceenshot) {
 		try {
@@ -34,7 +36,7 @@ public class ExtendedSeleniunApi{
 				if(takesceenshot[0])
 					report.info("Click on Element: " +elementName , true);	
 				else
-					report.info("Click on Element: " +elementName , true);
+					report.info("Click on Element: " +elementName , false);
 
 		}catch (StaleElementReferenceException e) {
 		} 		
@@ -43,7 +45,10 @@ public class ExtendedSeleniunApi{
 		}
 	}
 	
-	
+	/*
+	 * Get element by ID
+	 * @return type: WebElement
+	 */
 	
 		public WebElement getWebElementByID(String elementID) {
 			try {
@@ -56,7 +61,10 @@ public class ExtendedSeleniunApi{
 			}
 			
 		}
-	
+		/*
+		 * Get element by Xpath
+		 * @return type: WebElement
+		 */
 		public WebElement getWebElementByXpath(String elementID) {
 			try {
 				wait.until(ExpectedConditions.elementToBeClickable(By.xpath(elementID)));
@@ -68,7 +76,13 @@ public class ExtendedSeleniunApi{
 			}
 			
 		}
-
+		
+		/**
+		 * This method is used to perform the click functionality on the given
+		 * element
+		 * 
+		 * @param element, input Text, Element name, and optional parameter to take screenshot(by default it is false.
+		 */
 	public void inputText(WebElement element,String inputText, String elementName, boolean... takesceenshot) {
 		try {
 
@@ -91,6 +105,10 @@ public class ExtendedSeleniunApi{
 	}
 	}
 	
+	/*
+	 * Get text of element
+	 * @return type: String
+	 */
 	public String getTextOfElement(WebElement element) {
 		try {
 

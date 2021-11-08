@@ -1,8 +1,5 @@
 package com.packt.stepdefinations;
 
-import java.util.Set;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,7 +12,9 @@ import com.packt.utils.ReportGenerator;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-
+/*
+ * This the page object class for Step definations for the Home page of the application. 
+ */
 public class PacktHomePageSteps extends PacktHomePage{
 	private Configuration config = null;
 	private ReportGenerator report = null;

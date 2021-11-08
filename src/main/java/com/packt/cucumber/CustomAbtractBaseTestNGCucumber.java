@@ -1,9 +1,6 @@
 package com.packt.cucumber;
 
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -16,6 +13,8 @@ import cucumber.api.testng.PickleEventWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 
 /**
+ * This is Customised Cucumber test runner class.
+ * This has been customised to perform all our configurations before the framework test execution starts.
  * Runs each cucumber scenario found in the features as separated test
  */
 public abstract class CustomAbtractBaseTestNGCucumber {
@@ -59,6 +58,6 @@ public abstract class CustomAbtractBaseTestNGCucumber {
             return;
         }
         testNGCucumberRunner.finish();
-        reporter.endTest();
+        config.driver.close();
     }
 }

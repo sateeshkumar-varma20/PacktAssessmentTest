@@ -17,9 +17,12 @@ Installation:
 
 Run the script:
 
-To run the script just Right click on the TestNG.xml file and run as TestNG.
+1. There is on properties file "packt_configs.properties" under src/test/resources/ConfigFiles. Provide the username and password details to this file.
+2. To run the script just Right click on the TestNG.xml file and run as TestNG.
 
 
 OTher comments:
 
-1. Report will be generated in "target\ExtentReport\AutomationTestResport.html"
+1. This is just start of the framework design, there will more inhancement to this as when we will start working on this ahead.
+2. Report will be generated in "target\ExtentReport\AutomationTestResport.html".
+3. Will work on this framework to run through command line using maven test command.
