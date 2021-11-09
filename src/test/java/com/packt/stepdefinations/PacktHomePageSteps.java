@@ -1,10 +1,13 @@
 package com.packt.stepdefinations;
 
+import java.util.List;
+
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.WebElement;
 
 import com.packt.helperapis.Configuration;
 import com.packt.objectsrepository.PacktHomePage;
@@ -169,15 +172,27 @@ public class PacktHomePageSteps extends PacktHomePage {
 	}
 
 	@When("I select {string} Book From {string} category of browse menu")
-	public void iSelectBookFromCategoryOfBrowseMenu(String string, String string2) {
+	public void iSelectBookFromCategoryOfBrowseMenu(String bookName, String categoryName) {
 	    // Write code here that turns the phrase above into concrete actions
+		String parrentWindow = "";
+	    moveToWebElement(getWebElementByXpath(getBrowseMenuOptionsXpath(categoryName)), categoryName, true);
+	    List<WebElement> bookNameElements = getWebElementsByXpath(getBrowseMenuOptionsXpath(bookName));
+    	parrentWindow = driver.getWindowHandle();
+	    if(bookNameElements.size()>0)
+	    	clickOnElementUsingJavaScriptExecutor(bookNameElements.get(0), bookName);
+	    else
+	    	report.fail("No Book name "+bookName+" available under category "+categoryName);
 	    
-	}
-
-	@Then("I will be navigated to search result page of {string} Product and {string} category for {string} page")
-	public void iWillBeNavigatedToSearchResultPageOfProductAndCategoryForPage(String string, String string2, String string3) {
-	    // Write code here that turns the phrase above into concrete actions
-	    System.out.println("Ste def yet to implement");
+	    wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+	    
+	    switchToChildWindowFromParrent(parrentWindow);
+	    
+	    try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

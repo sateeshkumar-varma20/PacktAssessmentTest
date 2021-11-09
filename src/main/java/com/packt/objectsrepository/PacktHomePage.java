@@ -69,19 +69,15 @@ public class PacktHomePage extends ExtendedSeleniunApi {
 		clickOnElement(getWebElementByXpath(LOGOUT_LIST_BUTTON_XPATH), "Logout");
 	}
 	public String getBrowseMenuOptionsXpath(String menuName) {
-		browseMenuOptions = browseMenuOptions.replaceAll("menu_name", menuName);
-		return browseMenuOptions;
+		return browseMenuOptions.replaceAll("menu_name", menuName);
 	}
 	
 	public void clickOnBrowseSubMenu(String browseSubMenuName) {
 		clickOnElement(getWebElementByXpath(getBrowseMenuOptionsXpath(browseSubMenuName)), browseSubMenuName+" Submenu of Browse");
 	}
-	
-	
-	
+
 	public String getTopMenuOptionsXpath(String topMenuName) {
-		topMenuOptions = topMenuOptions.replaceAll("top_menu_name", topMenuName);
-		return topMenuOptions;
+		return topMenuOptions.replaceAll("top_menu_name", topMenuName);
 	}
 	
 	public void clickTopMenu(String topMenuName) {

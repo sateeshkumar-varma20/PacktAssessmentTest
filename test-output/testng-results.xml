@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="1" skipped="1">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-09T20:18:13 IST" name="Suite" finished-at="2021-11-09T20:18:43 IST" duration-ms="29703">
+  <suite started-at="2021-11-09T22:29:06 IST" name="Suite" finished-at="2021-11-09T22:29:52 IST" duration-ms="46178">
     <groups>
       <group name="cucumber">
         <method signature="CustomAbtractBaseTestNGCucumber.runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" name="runScenario" class="com.packt.cucumber.CustomAbtractBaseTestNGCucumber"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2021-11-09T20:18:13 IST" name="Test" finished-at="2021-11-09T20:18:43 IST" duration-ms="29703">
+    <test started-at="2021-11-09T22:29:06 IST" name="Test" finished-at="2021-11-09T22:29:52 IST" duration-ms="46178">
       <class name="com.packt.testrunner.TestRunner">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-09T20:18:13 IST" name="setUpClass" finished-at="2021-11-09T20:18:23 IST" duration-ms="9924" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-09T22:29:06 IST" name="setUpClass" finished-at="2021-11-09T22:29:17 IST" duration-ms="10855" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-09T20:18:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-09T20:18:34 IST" duration-ms="10605" status="FAIL">
+        <test-method signature="runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-09T22:29:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-09T22:29:30 IST" duration-ms="13158" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,24 +27,10 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Expected location of Browser menu is coordinates(564, 28) but recieved:(1217, 28)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected location of Browser menu is coordinates(564, 28) but recieved:(1217, 28)
-at org.testng.Assert.fail(Assert.java:99)
-at com.packt.utils.ReportGenerator.fail(ReportGenerator.java:145)
-at com.packt.utils.Assertions.assertEquals(Assertions.java:23)
-at com.packt.stepdefinations.PacktHomePageSteps.iVerifyTheElementsOnHomepage(PacktHomePageSteps.java:128)
-at ✽.I verify the elements on homepage(file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature:25)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-09T20:18:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-09T20:18:43 IST" duration-ms="8931" status="SKIP">
+        <test-method signature="runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-09T22:29:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-09T22:29:52 IST" duration-ms="21859" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -57,59 +43,10 @@ at ✽.I verify the elements on homepage(file:src/test/resources/Feature_Files/P
               </value>
             </param>
           </params>
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[cucumber.api.PendingException: TODO: implement me
-at com.packt.stepdefinations.PacktHomePageSteps.iSelectBookFromCategoryOfBrowseMenu(PacktHomePageSteps.java:174)
-at ✽.I select "Python" Book From "Data" category of browse menu(file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature:32)
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: cucumber.api.PendingException: TODO: implement me
-at com.packt.stepdefinations.PacktHomePageSteps.iSelectBookFromCategoryOfBrowseMenu(PacktHomePageSteps.java:174)
-at ✽.I select "Python" Book From "Data" category of browse menu(file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature:32)
-
-at cucumber.api.testng.TestCaseResultListener.getError(TestCaseResultListener.java:54)
-at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:69)
-at com.packt.cucumber.CustomAbtractBaseTestNGCucumber.runScenario(CustomAbtractBaseTestNGCucumber.java:39)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: cucumber.api.PendingException: TODO: implement me
-at com.packt.stepdefinations.PacktHomePageSteps.iSelectBookFromCategoryOfBrowseMenu(PacktHomePageSteps.java:174)
-at ✽.I select "Python" Book From "Data" category of browse menu(file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature:32)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-09T20:18:43 IST" name="tearDownClass" finished-at="2021-11-09T20:18:43 IST" duration-ms="175" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-09T22:29:52 IST" name="tearDownClass" finished-at="2021-11-09T22:29:52 IST" duration-ms="180" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

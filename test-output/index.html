@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,35 +93,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,  1 skipped,  </span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.packt.testrunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify that all the elements on the page are correct&quot;, &quot;Packt Assessment Sateesh Varma&quot;)">runScenario("Verify that all the elements on the page are correct", "Packt Assessment Sateesh Varma")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
-                    </span>
-                    <div class="method-list-content skipped suite-Suite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.packt.testrunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify that all the options from the Browse menu go to correct pages&quot;, &quot;Packt Assessment Sateesh Va...)">runScenario("Verify that all the options from the Browse menu go to correct pages", "Packt Assessment Sateesh Va...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Suite -->
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -133,9 +124,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.packt.testrunner.TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -145,50 +136,22 @@
                   </a> <!-- runScenario("Verify that all the elements on the page are correct", "Packt Assessment Sateesh Varma") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Verify that all the elements on the page are correct", "Packt Assessment Sateesh Varma")</span>
-                  <div class="stack-trace">java.lang.AssertionError: Expected location of Browser menu is coordinates(564, 28) but recieved:(1217, 28)
-	at com.packt.utils.ReportGenerator.fail(ReportGenerator.java:145)
-	at com.packt.utils.Assertions.assertEquals(Assertions.java:23)
-	at com.packt.stepdefinations.PacktHomePageSteps.iVerifyTheElementsOnHomepage(PacktHomePageSteps.java:128)
-	at ✽.I verify the elements on homepage(file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature:25)
-... Removed 1 stack frames
-</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">com.packt.testrunner.TestRunner</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;Verify that all the options from the Browse menu go to correct pages&quot;, &quot;Packt Assessment Sateesh Va...)">
                   </a> <!-- runScenario("Verify that all the options from the Browse menu go to correct pages", "Packt Assessment Sateesh Va...) -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Verify that all the options from the Browse menu go to correct pages", "Packt Assessment Sateesh Varma")</span>
-                  <div class="stack-trace">org.testng.SkipException: cucumber.api.PendingException: TODO: implement me
-	at com.packt.stepdefinations.PacktHomePageSteps.iSelectBookFromCategoryOfBrowseMenu(PacktHomePageSteps.java:174)
-	at ✽.I select &quot;Python&quot; Book From &quot;Data&quot; category of browse menu(file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature:32)
-
-	at cucumber.api.testng.TestCaseResultListener.getError(TestCaseResultListener.java:54)
-	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:69)
-	at com.packt.cucumber.CustomAbtractBaseTestNGCucumber.runScenario(CustomAbtractBaseTestNGCucumber.java:39)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: cucumber.api.PendingException: TODO: implement me
-	at com.packt.stepdefinations.PacktHomePageSteps.iSelectBookFromCategoryOfBrowseMenu(PacktHomePageSteps.java:174)
-	at ✽.I select &quot;Python&quot; Book From &quot;Data&quot; category of browse menu(file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature:32)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -253,16 +216,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.packt.testrunner.TestRunner')
-data.setCell(0, 3, 10605);
+data.setCell(0, 3, 21859);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'com.packt.testrunner.TestRunner')
-data.setCell(1, 3, 8931);
+data.setCell(1, 3, 13158);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 35 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -294,18 +257,16 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">runScenario("Verify that all the elements on the page are correct", "Packt Assessment Sateesh Varma")</span>
-                <span class="method-start">9963 ms</span>
+                <span class="method-start">10940 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Verify that all the options from the Browse menu go to correct pages", "Packt Assessment Sateesh Va...)</span>
-                <span class="method-start">20575 ms</span>
+                <span class="method-start">24109 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">29512 ms</span>
+                <span class="method-start">45981 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

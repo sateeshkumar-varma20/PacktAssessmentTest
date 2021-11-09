@@ -1,12 +1,15 @@
 package com.packt.helperapis;
 
+import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -29,8 +32,29 @@ public class ExtendedSeleniunApi {
 	 */
 	public void clickOnElement(WebElement element, String elementName, boolean... takesceenshot) {
 		try {
-
+			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
+			if (takesceenshot.length < 1) {
+				takesceenshot = new boolean[1];
+				takesceenshot[0] = false;
+			}
+
+			if (takesceenshot[0])
+				report.info("Click on Element: " + elementName, true);
+			else
+				report.info("Click on Element: " + elementName, false);
+
+		} catch (StaleElementReferenceException e) {
+		} catch (Exception e) {
+			report.fail(e.getMessage());
+		}
+	}
+	
+	public void clickOnElementUsingJavaScriptExecutor(WebElement element, String elementName, boolean... takesceenshot) {
+		try {
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			JavascriptExecutor executor = (JavascriptExecutor)driver;
+			executor.executeScript("arguments[0].click();", element);
 			if (takesceenshot.length < 1) {
 				takesceenshot = new boolean[1];
 				takesceenshot[0] = false;
@@ -70,10 +94,22 @@ public class ExtendedSeleniunApi {
 	 * 
 	 * @return type: WebElement
 	 */
-	public WebElement getWebElementByXpath(String elementID) {
+	public WebElement getWebElementByXpath(String elementXpath) {
 		try {
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(elementID)));
-			return driver.findElement(By.xpath(elementID));
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath)));
+			return driver.findElement(By.xpath(elementXpath));
+		} catch (Exception e) {
+			report.fail(e.getMessage());
+			e.printStackTrace();
+			return null;
+		}
+
+	}
+	
+	public List<WebElement> getWebElementsByXpath(String elementXpath) {
+		try {
+			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(elementXpath)));
+			return driver.findElements(By.xpath(elementXpath));
 		} catch (Exception e) {
 			report.fail(e.getMessage());
 			e.printStackTrace();
@@ -174,6 +210,16 @@ public class ExtendedSeleniunApi {
 		driver.switchTo().window(windowName);
 	}
 	
+	public void switchToChildWindowFromParrent(String windowName) {
+		Set<String> allWindows = driver.getWindowHandles();
+		
+		for (String window : allWindows){
+			if (!window.equals(windowName)) {
+				driver.switchTo().window(window);
+			}
+		}
+	}
+	
 	public void closeMainWindowsAndSwitchToNewWindow(String windowName) {
 		Set<String> allWindows = driver.getWindowHandles();
 		String childWindow = "";
@@ -190,4 +236,39 @@ public class ExtendedSeleniunApi {
 		driver.switchTo().window(childWindow);
 	}
 	
+	
+	public void moveToWebElement(WebElement element, String elementName, boolean... takesceenshot) {
+		try {
+			
+			Actions action = new Actions(driver);
+			action.moveToElement(element);
+			action.perform();
+			if (takesceenshot.length < 1) {
+				takesceenshot = new boolean[1];
+				takesceenshot[0] = false;
+			}
+
+			if (takesceenshot[0])
+				report.info("Move to: " + elementName, true);
+			else
+				report.info("Move to: " + elementName, false);
+
+		} catch (StaleElementReferenceException e) {
+		} catch (Exception e) {
+			report.fail(e.getMessage());
+		}
+	}
+	
+	public boolean checkIfElementIsChecked(WebElement element) {
+		try {
+
+			return element.isSelected();
+
+		} catch (StaleElementReferenceException e) {
+			return false;
+		} catch (Exception e) {
+			report.fail(e.getMessage());
+			return false;
+		}
+	}
 }

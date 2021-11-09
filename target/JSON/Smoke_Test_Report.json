@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 2614238600,
+              "duration": 2579586600,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 680203500,
+              "duration": 1089247700,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3937203000,
+              "duration": 4680067700,
               "status": "passed"
             },
             "line": 24,
@@ -46,9 +46,8 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: Expected location of Browser menu is coordinates(564, 28) but recieved:(1217, 28)\r\n\tat org.testng.Assert.fail(Assert.java:99)\r\n\tat com.packt.utils.ReportGenerator.fail(ReportGenerator.java:145)\r\n\tat com.packt.utils.Assertions.assertEquals(Assertions.java:23)\r\n\tat com.packt.stepdefinations.PacktHomePageSteps.iVerifyTheElementsOnHomepage(PacktHomePageSteps.java:128)\r\n\tat ✽.I verify the elements on homepage(file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature:25)\r\n",
-              "duration": 3211691500,
-              "status": "failed"
+              "duration": 4145168000,
+              "status": "passed"
             },
             "line": 25,
             "name": "I verify the elements on homepage",
@@ -59,8 +58,8 @@
           },
           {
             "result": {
-              "duration": 6800,
-              "status": "skipped"
+              "duration": 253304200,
+              "status": "passed"
             },
             "line": 26,
             "name": "verification should be successfull",
@@ -83,7 +82,7 @@
         "before": [
           {
             "result": {
-              "duration": 3836683900,
+              "duration": 4100389100,
               "status": "passed"
             },
             "match": {
@@ -98,7 +97,7 @@
         "after": [
           {
             "result": {
-              "duration": 360241800,
+              "duration": 505345700,
               "status": "passed"
             },
             "match": {
@@ -111,7 +110,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2774962100,
+              "duration": 2819475200,
               "status": "passed"
             },
             "line": 30,
@@ -123,7 +122,7 @@
           },
           {
             "result": {
-              "duration": 1949235600,
+              "duration": 2593260300,
               "status": "passed"
             },
             "line": 31,
@@ -141,9 +140,8 @@
           },
           {
             "result": {
-              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat com.packt.stepdefinations.PacktHomePageSteps.iSelectBookFromCategoryOfBrowseMenu(PacktHomePageSteps.java:174)\r\n\tat ✽.I select \"Python\" Book From \"Data\" category of browse menu(file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature:32)\r\n",
-              "duration": 1015600,
-              "status": "pending"
+              "duration": 10819116000,
+              "status": "passed"
             },
             "line": 32,
             "name": "I select \"Python\" Book From \"Data\" category of browse menu",
@@ -164,8 +162,8 @@
           },
           {
             "result": {
-              "duration": 3100,
-              "status": "skipped"
+              "duration": 1014862400,
+              "status": "passed"
             },
             "line": 33,
             "name": "I will be navigated to search result page of \"Book\" Product and \"Data\" category for \"Python\" page",
@@ -184,7 +182,7 @@
                   "offset": 84
                 }
               ],
-              "location": "PacktHomePageSteps.iWillBeNavigatedToSearchResultPageOfProductAndCategoryForPage(String,String,String)"
+              "location": "PacktBooksAndVideosLibSteps.iWillBeNavigatedToSearchResultPageOfProductAndCategoryForPage(String,String,String)"
             },
             "keyword": "Then "
           }

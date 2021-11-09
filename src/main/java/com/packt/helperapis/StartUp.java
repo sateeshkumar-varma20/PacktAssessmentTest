@@ -37,8 +37,8 @@ public class StartUp extends ExtendedSeleniunApi{
 	public void loginToPacktApplication(String url,String userName, String password) {
 		try {
 
-			driver.get("chrome://settings/clearBrowserData");
-			driver.findElement(By.xpath("//settings-ui")).sendKeys(Keys.ENTER);	 // This will clear the cache of application to avoid any failure in case of session is not stopped from previous execution.
+//			driver.get("chrome://settings/clearBrowserData");
+//			driver.findElement(By.xpath("//settings-ui")).sendKeys(Keys.ENTER);	 // This will clear the cache of application to avoid any failure in case of session is not stopped from previous execution.
 			report.info("Launch URL: "+url, false);
 			driver.navigate().to(url);
 			driver.manage().window().maximize();
