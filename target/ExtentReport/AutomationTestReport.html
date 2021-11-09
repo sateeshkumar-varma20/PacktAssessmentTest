@@ -46,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Nov 9, 2021 02:47:45 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Nov 9, 2021 08:18:23 PM</span>
 				</a>
 			</li>
 			<li>
@@ -72,6 +72,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -122,10 +123,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -137,10 +138,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='22.222%'><span class='strong'>2</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='11.111%'><span class='strong'>2</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='77.778%'>7</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='5.556%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='83.333%'>15</span> others
 				</div>
 			</div>
 		</div>
@@ -155,25 +156,93 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active has-leaf pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Packt_Assessment_Feature</span>
-						<span class='test-time'>Nov 9, 2021 02:47:46 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Nov 9, 2021 08:18:23 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Nov 9, 2021 02:47:46 PM</span>
-	<span class='label end-time'>Nov 9, 2021 02:47:59 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+740ms</span>
+	<span class='label start-time'>Nov 9, 2021 08:18:23 PM</span>
+	<span class='label end-time'>Nov 9, 2021 08:18:43 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+225ms</span>
 </div>
 	<ul class='collapsible node-list' data-collapsible='accordion'>
 		
-				<li class='node level-1 leaf pass' status='pass' test-id='2'>
+				<li class='node level-1 leaf fail' status='fail' test-id='2'>
 					<div class='collapsible-header'>
 						<h5 class='node-name'><u><b>Verify that all the elements on the page are correct</b></u></h5>
-						<span class="node-time label grey lighten-1 white-text">Nov 9, 2021 02:47:59 PM</span>
-						<span class='node-duration label grey lighten-1 white-text'>0h 0m 12s+729ms</span>
+						<span class="node-time label grey lighten-1 white-text">Nov 9, 2021 08:18:34 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 10s+51ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:18:23 PM</td>
+													<td class='step-details'>Starting test: <u><b>Verify that all the elements on the page are correct</b></u></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:18:24 PM</td>
+													<td class='step-details'>Launch URL: https://subscription.packtpub.com/login</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:18:26 PM</td>
+													<td class='step-details'>Input 'satish.varma20@gmail.com' in User name</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:18:26 PM</td>
+													<td class='step-details'>Input ************ as Password</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:18:26 PM</td>
+													<td class='step-details'>Click on Element: Sign In Button</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>8:18:30 PM</td>
+													<td class='step-details'>USer in on homepage.!<img data-featherlight='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109081830.png' width='10%' src='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109081830.png' data-src='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109081830.png'></td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>8:18:33 PM</td>
+													<td class='step-details'>Expected location of Browser menu is coordinates(564, 28) but recieved:(1217, 28)<img data-featherlight='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109081833.png' width='10%' src='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109081833.png' data-src='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109081833.png'></td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:18:33 PM</td>
+													<td class='step-details'>Click on Element: Account from Top Menu</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:18:34 PM</td>
+													<td class='step-details'>Click on Element: Logout</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='3'>
+					<div class='collapsible-header'>
+						<h5 class='node-name'><u><b>Verify that all the options from the Browse menu go to correct pages</b></u></h5>
+						<span class="node-time label grey lighten-1 white-text">Nov 9, 2021 08:18:43 PM</span>
+						<span class='node-duration label grey lighten-1 white-text'>0h 0m 8s+767ms</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 						<div class='collapsible-body'>
@@ -189,47 +258,47 @@
 										<tbody>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>2:47:46 PM</td>
-													<td class='step-details'>Starting test: <u><b>Verify that all the elements on the page are correct</b></u></td>
+													<td class='timestamp'>8:18:34 PM</td>
+													<td class='step-details'>Starting test: <u><b>Verify that all the options from the Browse menu go to correct pages</b></u></td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>2:47:47 PM</td>
+													<td class='timestamp'>8:18:36 PM</td>
 													<td class='step-details'>Launch URL: https://subscription.packtpub.com/login</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>2:47:49 PM</td>
+													<td class='timestamp'>8:18:38 PM</td>
 													<td class='step-details'>Input 'satish.varma20@gmail.com' in User name</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>2:47:49 PM</td>
+													<td class='timestamp'>8:18:38 PM</td>
 													<td class='step-details'>Input ************ as Password</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>2:47:49 PM</td>
+													<td class='timestamp'>8:18:38 PM</td>
 													<td class='step-details'>Click on Element: Sign In Button</td>
 												</tr>
 												<tr class='log' status='pass'>
 													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>2:47:53 PM</td>
-													<td class='step-details'>USer in on homepage.!<img data-featherlight='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109024753.png' width='10%' src='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109024753.png' data-src='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109024753.png'></td>
-												</tr>
-												<tr class='log' status='pass'>
-													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-													<td class='timestamp'>2:47:59 PM</td>
-													<td class='step-details'>All the Elements on the screen verified! .<img data-featherlight='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109024758.png' width='10%' src='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109024758.png' data-src='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109024758.png'></td>
+													<td class='timestamp'>8:18:41 PM</td>
+													<td class='step-details'>USer in on homepage.!<img data-featherlight='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109081840.png' width='10%' src='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109081840.png' data-src='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109081840.png'></td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>2:47:59 PM</td>
-													<td class='step-details'>Click on Element: Account Menu<img data-featherlight='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109024759.png' width='10%' src='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109024759.png' data-src='C:\Users\MSUSERSL123\eclipse-workspace\PacktAssessment\target\ExtentReport\Screenshots\20211109024759.png'></td>
+													<td class='timestamp'>8:18:43 PM</td>
+													<td class='step-details'>Click on Element: Browse from Top Menu</td>
 												</tr>
 												<tr class='log' status='info'>
 													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-													<td class='timestamp'>2:47:59 PM</td>
+													<td class='timestamp'>8:18:43 PM</td>
+													<td class='step-details'>Click on Element: Account from Top Menu</td>
+												</tr>
+												<tr class='log' status='info'>
+													<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+													<td class='timestamp'>8:18:43 PM</td>
 													<td class='step-details'>Click on Element: Logout</td>
 												</tr>
 										</tbody>
@@ -275,31 +344,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>9</div>
+					<div class='panel-lead'>18</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Nov 9, 2021 02:47:45 PM</div>
+					<div class='panel-lead'>Nov 9, 2021 08:18:23 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Nov 9, 2021 02:47:59 PM</div>
+			 		<div class='panel-lead'>Nov 9, 2021 08:18:43 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>14,064ms</div>
+					<div class='panel-lead'>19,773ms</div>
 				</div>
 			</div>
 		</div>
@@ -313,21 +382,21 @@
 		<script>
 			var statusGroup = {
 				passParent: 1,
-				failParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
 				passChild: 2,
-				failChild: 0,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
-				infoChild: 7,
-				exceptionsChild: 0,
+				infoChild: 15,
+				exceptionsChild: 1,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

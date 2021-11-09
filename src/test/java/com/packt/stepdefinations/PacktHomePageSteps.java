@@ -52,7 +52,7 @@ public class PacktHomePageSteps extends PacktHomePage {
 		String colour = "";
 		Point point = null;
 
-		backgroundColor = getBackgroundColourOfElement(getWebElementByXpath(getACCOUNT_MENU_XPATH()));
+		backgroundColor = getBackgroundColourOfElement(getWebElementByXpath(getTopMenuOptionsXpath(ACCOUNT_MENU)));
 		Assertions.assertEquals("rgba(0, 0, 0, 0)", backgroundColor,
 				"Expected Backgroud color of Account menu is rgba(0, 0, 0, 0) but recieved:" + backgroundColor);
 
@@ -64,7 +64,7 @@ public class PacktHomePageSteps extends PacktHomePage {
 		Assertions.assertEquals("rgba(255, 255, 255, 1)", backgroundColor,
 				"Expected Backgroud color of Top Search is rgba(255, 255, 255, 1) but recieved:" + backgroundColor);
 
-		backgroundColor = getBackgroundColourOfElement(getWebElementByXpath(getBROWSE_MENU_XPATH()));
+		backgroundColor = getBackgroundColourOfElement(getWebElementByXpath(getTopMenuOptionsXpath(BROWSE_MENU)));
 		Assertions.assertEquals("rgba(0, 0, 0, 0)", backgroundColor,
 				"Expected Backgroud color of Browser menu is rgba(0, 0, 0, 0) but recieved:" + backgroundColor);
 
@@ -76,13 +76,13 @@ public class PacktHomePageSteps extends PacktHomePage {
 		Assertions.assertEquals("rgba(36, 39, 46, 0.85)", backgroundColor,
 				"Expected Backgroud color of Chapter list is rgba(36, 39, 46, 0.85) but recieved:" + backgroundColor);
 
-		backgroundColor = getBackgroundColourOfElement(getWebElementByXpath(getMYLIBRARY_MENU_XPATH()));
+		backgroundColor = getBackgroundColourOfElement(getWebElementByXpath(getTopMenuOptionsXpath(LIBRARY_MENU)));
 		Assertions.assertEquals("rgba(0, 0, 0, 0)", backgroundColor,
 				"Expected Backgroud color of Libraray menu is rgba(0, 0, 0, 0) but recieved:" + backgroundColor);
 
 		// Now validate Colors of the elements
 
-		colour = getColourOfElement(getWebElementByXpath(getACCOUNT_MENU_XPATH()));
+		colour = getColourOfElement(getWebElementByXpath(getTopMenuOptionsXpath(ACCOUNT_MENU)));
 		Assertions.assertEquals("rgba(255, 255, 255, 1)", colour,
 				"Expected color of Account menu is rgba(255, 255, 255, 1) but recieved:" + colour);
 
@@ -94,7 +94,7 @@ public class PacktHomePageSteps extends PacktHomePage {
 		Assertions.assertEquals("rgba(0, 0, 0, 1)", colour,
 				"Expected color of Top Search is rgba(0, 0, 0, 1) but recieved:" + colour);
 
-		colour = getColourOfElement(getWebElementByXpath(getBROWSE_MENU_XPATH()));
+		colour = getColourOfElement(getWebElementByXpath(getTopMenuOptionsXpath(BROWSE_MENU)));
 		Assertions.assertEquals("rgba(255, 255, 255, 1)", colour,
 				"Expected color of Browser menu is rgba(255, 255, 255, 1) but recieved:" + colour);
 
@@ -106,13 +106,13 @@ public class PacktHomePageSteps extends PacktHomePage {
 		Assertions.assertEquals("rgba(255, 255, 255, 1)", colour,
 				"Expected color of Chapter list is rgba(255, 255, 255, 1) but recieved:" + colour);
 
-		colour = getColourOfElement(getWebElementByXpath(getMYLIBRARY_MENU_XPATH()));
+		colour = getColourOfElement(getWebElementByXpath(getTopMenuOptionsXpath(LIBRARY_MENU)));
 		Assertions.assertEquals("rgba(255, 255, 255, 1)", colour,
 				"Expected color of Libraray menu is rgba(255, 255, 255, 1) but recieved:" + colour);
 
 		// Now validate locations of the elements
 
-		point = getLocationOfElement(getWebElementByXpath(getACCOUNT_MENU_XPATH()));
+		point = getLocationOfElement(getWebElementByXpath(getTopMenuOptionsXpath(ACCOUNT_MENU)));
 		Assertions.assertEquals("(1217, 28)", point.toString(),
 				"Expected location of Account menu is coordinates(1217, 28) but recieved:" + point.toString());
 		
@@ -124,7 +124,7 @@ public class PacktHomePageSteps extends PacktHomePage {
 		Assertions.assertEquals("(196, 17)", point.toString(),
 				"Expected location of Top search bar is coordinates(196, 17) but recieved:" + point.toString());
 		
-		point = getLocationOfElement(getWebElementByXpath(getBROWSE_MENU_XPATH()));
+		point = getLocationOfElement(getWebElementByXpath(getTopMenuOptionsXpath(BROWSE_MENU)));
 		Assertions.assertEquals("(564, 28)", point.toString(),
 				"Expected location of Browser menu is coordinates(564, 28) but recieved:" + point.toString());
 		
@@ -136,11 +136,9 @@ public class PacktHomePageSteps extends PacktHomePage {
 		Assertions.assertEquals("(863, 175)", point.toString(),
 				"Expected location of Chapter list is coordinates(863, 175) but recieved:" + point.toString());
 		
-		point = getLocationOfElement(getWebElementByXpath(getMYLIBRARY_MENU_XPATH()));
+		point = getLocationOfElement(getWebElementByXpath(getTopMenuOptionsXpath(LIBRARY_MENU)));
 		Assertions.assertEquals("(1114, 28)", point.toString(),
-				"Expected location of Account menu is coordinates(1114, 28) but recieved:" + point.toString());
-
-
+				"Expected location of Library menu is coordinates(1114, 28) but recieved:" + point.toString());
 		
 		elementValidation = true;
 	}
@@ -148,9 +146,38 @@ public class PacktHomePageSteps extends PacktHomePage {
 	@Then("verification should be successfull")
 	public void verificationShouldBeSuccessfull() {
 		if(elementValidation)
-			report.pass("All the Elements on the screen verified! .", true);
+			report.pass("All the Elements on the screen verified!", true);
 		else
-			report.pass("Verification of home page elements failed.", true);
+			report.fail("Verification of home page elements failed.");
+	}
+	
+	@Given("I click on {string} top menu")
+	public void iClickOnTopMenu(String menuName) {
+	    // Write code here that turns the phrase above into concrete actions
+		if (menuName.equals("Browse")) {
+			clickTopMenu(BROWSE_MENU);
+		}
+		else if (menuName.equals("Account")) {
+			clickTopMenu(ACCOUNT_MENU);
+		}
+		else if (menuName.equals("My Libraray")) {
+			clickTopMenu(LIBRARY_MENU);
+		}
+		else {
+			report.fail("Menu name should be Browse or Account or My Libraray"); 
+		}
+	}
+
+	@When("I select {string} Book From {string} category of browse menu")
+	public void iSelectBookFromCategoryOfBrowseMenu(String string, String string2) {
+	    // Write code here that turns the phrase above into concrete actions
+	    
+	}
+
+	@Then("I will be navigated to search result page of {string} Product and {string} category for {string} page")
+	public void iWillBeNavigatedToSearchResultPageOfProductAndCategoryForPage(String string, String string2, String string3) {
+	    // Write code here that turns the phrase above into concrete actions
+	    System.out.println("Ste def yet to implement");
 	}
 
 }

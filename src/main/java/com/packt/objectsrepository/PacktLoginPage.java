@@ -26,7 +26,6 @@ public class PacktLoginPage extends ExtendedSeleniunApi {
 			ReportGenerator.getReportGenerator().fail(e.getMessage());
 		}
 
-//		inputText(getWebElementByID(PASSWORD_INPUT_ID), password, "Password");
 	}
 
 	public void clickSignInButton() {

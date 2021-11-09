@@ -1,4 +1,4 @@
-#Author: your.email@your.domain.com
+#Author: sateeshkumar.varma20@gmail.com
 #Keywords Summary :
 #Feature: List of scenarios.
 #Scenario: Business rule through list of steps with arguments.
@@ -24,14 +24,12 @@ Feature: Packt Assessment Sateesh Varma
     Given I am on home page of packt application
     When I verify the elements on homepage
 		Then verification should be successfull
+		
+	@tag1	
+	Scenario: Verify that all the options from the Browse menu go to correct pages
+		Given I am on home page of packt application
+		And I click on "Browse" top menu
+		When I select "Python" Book From "Data" category of browse menu
+		Then I will be navigated to search result page of "Book" Product and "Data" category for "Python" page
+		
 
-  #@tag2
-  #Scenario Outline: Title of your scenario outline
-    #Given I want to write a step with <name>
-    #When I check for the <value> in step
-    #Then I verify the <status> in step
-#
-    #Examples: 
-      #| name  | value | status  |
-      #| name1 |     5 | success |
-      #| name2 |     7 | Fail    |

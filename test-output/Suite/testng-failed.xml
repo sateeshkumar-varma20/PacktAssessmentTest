@@ -6,7 +6,7 @@
       <class name="com.packt.testrunner.TestRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="runScenario" invocation-numbers="0 1"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.packt.testrunner.TestRunner -->

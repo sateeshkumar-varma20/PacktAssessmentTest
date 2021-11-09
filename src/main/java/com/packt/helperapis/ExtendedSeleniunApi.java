@@ -1,5 +1,7 @@
 package com.packt.helperapis;
 
+import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -17,7 +19,7 @@ public class ExtendedSeleniunApi {
 	private Configuration config = Configuration.getConfigurationInstance();
 	private ReportGenerator report = ReportGenerator.getReportGenerator();
 	private WebDriver driver = config.getDriver();
-	public WebDriverWait wait = config.getWait(driver, 100);
+	public WebDriverWait wait = config.getWait(driver, 30);
 
 	/**
 	 * This method is used to perform the click functionality on the given element
@@ -158,6 +160,34 @@ public class ExtendedSeleniunApi {
 			report.fail(e.getMessage());
 			return null;
 		}
+	}
+	
+	public void closeOtherWindowsAndSwitchToMainWindow(String windowName) {
+		Set<String> allWindows = driver.getWindowHandles();
+		
+		for (String window : allWindows){
+			if (!window.equals(windowName)) {
+				driver.switchTo().window(window);
+				driver.close();
+			}
+		}
+		driver.switchTo().window(windowName);
+	}
+	
+	public void closeMainWindowsAndSwitchToNewWindow(String windowName) {
+		Set<String> allWindows = driver.getWindowHandles();
+		String childWindow = "";
+		
+		for (String window : allWindows){
+			if (window.equals(windowName)) {
+				driver.switchTo().window(window);
+				driver.close();
+			}
+			else {
+				childWindow = window;
+			}
+		}
+		driver.switchTo().window(childWindow);
 	}
 	
 }

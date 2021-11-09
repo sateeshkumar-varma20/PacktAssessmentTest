@@ -13,7 +13,7 @@ import com.packt.utils.ReportGenerator;
 /*
  * This class has methods to perform the initial and ending acicities for the application like launch url, login, logout etc.
  */
-public class StartUp{
+public class StartUp extends ExtendedSeleniunApi{
 	private Configuration config = null;
 	private WebDriver driver = null;
 	public  WebDriverWait wait = null ;
@@ -24,7 +24,7 @@ public class StartUp{
 	@FindBy(xpath="//settings-ui")
 	private WebElement chromeSetting;
 	
-	public StartUp() {
+	public StartUp(){
 		config = Configuration.getConfigurationInstance();
 		driver = config.getDriver();
 		wait = config.getWait(driver, 100) ;
@@ -52,8 +52,11 @@ public class StartUp{
 	}
 	
 	public void logOut() {
-		homePage.clickAccountMenu();
+		String parrentWindow = driver.getWindowHandle();
+		homePage.clickTopMenu(PacktHomePage.ACCOUNT_MENU);
 		homePage.clickLogOut();
+		closeMainWindowsAndSwitchToNewWindow(parrentWindow);
+
 	}
 	public void closeDriver(){
 		driver.close();

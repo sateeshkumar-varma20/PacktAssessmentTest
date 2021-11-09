@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 3038418900,
+              "duration": 2614238600,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 1067157900,
+              "duration": 680203500,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4038816700,
+              "duration": 3937203000,
               "status": "passed"
             },
             "line": 24,
@@ -46,8 +46,9 @@
           },
           {
             "result": {
-              "duration": 4899616700,
-              "status": "passed"
+              "error_message": "java.lang.AssertionError: Expected location of Browser menu is coordinates(564, 28) but recieved:(1217, 28)\r\n\tat org.testng.Assert.fail(Assert.java:99)\r\n\tat com.packt.utils.ReportGenerator.fail(ReportGenerator.java:145)\r\n\tat com.packt.utils.Assertions.assertEquals(Assertions.java:23)\r\n\tat com.packt.stepdefinations.PacktHomePageSteps.iVerifyTheElementsOnHomepage(PacktHomePageSteps.java:128)\r\n\tat ✽.I verify the elements on homepage(file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature:25)\r\n",
+              "duration": 3211691500,
+              "status": "failed"
             },
             "line": 25,
             "name": "I verify the elements on homepage",
@@ -58,13 +59,132 @@
           },
           {
             "result": {
-              "duration": 271791000,
-              "status": "passed"
+              "duration": 6800,
+              "status": "skipped"
             },
             "line": 26,
             "name": "verification should be successfull",
             "match": {
               "location": "PacktHomePageSteps.verificationShouldBeSuccessfull()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@tag1"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3836683900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestRunner.setUpReporting(Scenario)"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "Verify that all the options from the Browse menu go to correct pages",
+        "description": "",
+        "id": "packt-assessment-sateesh-varma;verify-that-all-the-options-from-the-browse-menu-go-to-correct-pages",
+        "after": [
+          {
+            "result": {
+              "duration": 360241800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestRunner.endSession()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2774962100,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I am on home page of packt application",
+            "match": {
+              "location": "PacktHomePageSteps.iAmOnHomePageOfPacktApplication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1949235600,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I click on \"Browse\" top menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Browse\"",
+                  "offset": 11
+                }
+              ],
+              "location": "PacktHomePageSteps.iClickOnTopMenu(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat com.packt.stepdefinations.PacktHomePageSteps.iSelectBookFromCategoryOfBrowseMenu(PacktHomePageSteps.java:174)\r\n\tat ✽.I select \"Python\" Book From \"Data\" category of browse menu(file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature:32)\r\n",
+              "duration": 1015600,
+              "status": "pending"
+            },
+            "line": 32,
+            "name": "I select \"Python\" Book From \"Data\" category of browse menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Python\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"Data\"",
+                  "offset": 28
+                }
+              ],
+              "location": "PacktHomePageSteps.iSelectBookFromCategoryOfBrowseMenu(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3100,
+              "status": "skipped"
+            },
+            "line": 33,
+            "name": "I will be navigated to search result page of \"Book\" Product and \"Data\" category for \"Python\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Book\"",
+                  "offset": 45
+                },
+                {
+                  "val": "\"Data\"",
+                  "offset": 64
+                },
+                {
+                  "val": "\"Python\"",
+                  "offset": 84
+                }
+              ],
+              "location": "PacktHomePageSteps.iWillBeNavigatedToSearchResultPageOfProductAndCategoryForPage(String,String,String)"
             },
             "keyword": "Then "
           }

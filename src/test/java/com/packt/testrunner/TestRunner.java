@@ -54,7 +54,7 @@ public class TestRunner extends CustomAbtractBaseTestNGCucumber {
 
 	/*
 	 * This will be executed after each scenario in feature file.
-	 * This will fludh all the reporting of the scenario to html file and logout.
+	 * This will flush all the reporting of the scenario to html file and logout.
 	 */
 	@After
 	public void endSession() throws InterruptedException {
