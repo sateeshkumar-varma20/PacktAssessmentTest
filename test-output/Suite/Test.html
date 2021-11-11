@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 09 22:29:06 IST 2021</td>
+<td>Started on:</td><td>Thu Nov 11 19:35:46 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>46 seconds (46178 ms)</td>
+<tr><td>Total time:</td><td>109 seconds (109466 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,31 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.packt.testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.packt.testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that all the elements on the page are correct", "Packt Assessment Sateesh Varma"</td>
+<td><div><pre>java.lang.AssertionError: Expected location of Read now is coordinates(653, 205) but recieved:(653, 619)
+	at com.packt.utils.ReportGenerator.fail(ReportGenerator.java:145)
+	at com.packt.utils.Assertions.assertEquals(Assertions.java:23)
+	at com.packt.stepdefinations.PacktHomePageSteps.iVerifyTheElementsOnHomepage(PacktHomePageSteps.java:135)
+	at ?.I verify the elements on homepage(file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature:25)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace823056052", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace823056052'><pre>java.lang.AssertionError: Expected location of Read now is coordinates(653, 205) but recieved:(653, 619)
+	at org.testng.Assert.fail(Assert.java:99)
+	at com.packt.utils.ReportGenerator.fail(ReportGenerator.java:145)
+	at com.packt.utils.Assertions.assertEquals(Assertions.java:23)
+	at com.packt.stepdefinations.PacktHomePageSteps.iVerifyTheElementsOnHomepage(PacktHomePageSteps.java:135)
+	at ?.I verify the elements on homepage(file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature:25)
+</pre></div></td>
+<td>50</td>
+<td>com.packt.testrunner.TestRunner@23941fb4</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,14 +100,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.packt.testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.packt.testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that all the elements on the page are correct", "Packt Assessment Sateesh Varma"</td>
+<td title='com.packt.testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.packt.testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that all the options from the Browse menu go to correct pages", "Packt Assessment Sateesh Varma"</td>
 <td></td>
-<td>13</td>
+<td>30</td>
 <td>com.packt.testrunner.TestRunner@23941fb4</td></tr>
 <tr>
 <td title='com.packt.testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.packt.testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that all the options from the Browse menu go to correct pages", "Packt Assessment Sateesh Varma"</td>
 <td></td>
-<td>21</td>
+<td>17</td>
 <td>com.packt.testrunner.TestRunner@23941fb4</td></tr>
 </table><p>
 </body>

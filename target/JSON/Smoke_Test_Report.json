@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 2579586600,
+              "duration": 2010846700,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 1089247700,
+              "duration": 605390800,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4680067700,
+              "duration": 46635293000,
               "status": "passed"
             },
             "line": 24,
@@ -46,8 +46,9 @@
           },
           {
             "result": {
-              "duration": 4145168000,
-              "status": "passed"
+              "error_message": "java.lang.AssertionError: Expected location of Read now is coordinates(653, 205) but recieved:(653, 619)\r\n\tat org.testng.Assert.fail(Assert.java:99)\r\n\tat com.packt.utils.ReportGenerator.fail(ReportGenerator.java:145)\r\n\tat com.packt.utils.Assertions.assertEquals(Assertions.java:23)\r\n\tat com.packt.stepdefinations.PacktHomePageSteps.iVerifyTheElementsOnHomepage(PacktHomePageSteps.java:135)\r\n\tat ✽.I verify the elements on homepage(file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature:25)\r\n",
+              "duration": 1144439100,
+              "status": "failed"
             },
             "line": 25,
             "name": "I verify the elements on homepage",
@@ -58,8 +59,8 @@
           },
           {
             "result": {
-              "duration": 253304200,
-              "status": "passed"
+              "duration": 6100,
+              "status": "skipped"
             },
             "line": 26,
             "name": "verification should be successfull",
@@ -82,7 +83,7 @@
         "before": [
           {
             "result": {
-              "duration": 4100389100,
+              "duration": 16184186300,
               "status": "passed"
             },
             "match": {
@@ -90,14 +91,14 @@
             }
           }
         ],
-        "line": 29,
+        "line": 37,
         "name": "Verify that all the options from the Browse menu go to correct pages",
         "description": "",
-        "id": "packt-assessment-sateesh-varma;verify-that-all-the-options-from-the-browse-menu-go-to-correct-pages",
+        "id": "packt-assessment-sateesh-varma;verify-that-all-the-options-from-the-browse-menu-go-to-correct-pages;;2",
         "after": [
           {
             "result": {
-              "duration": 505345700,
+              "duration": 429999400,
               "status": "passed"
             },
             "match": {
@@ -106,14 +107,14 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 2819475200,
+              "duration": 2627589000,
               "status": "passed"
             },
-            "line": 30,
+            "line": 31,
             "name": "I am on home page of packt application",
             "match": {
               "location": "PacktHomePageSteps.iAmOnHomePageOfPacktApplication()"
@@ -122,10 +123,10 @@
           },
           {
             "result": {
-              "duration": 2593260300,
+              "duration": 154401900,
               "status": "passed"
             },
-            "line": 31,
+            "line": 32,
             "name": "I click on \"Browse\" top menu",
             "match": {
               "arguments": [
@@ -140,10 +141,10 @@
           },
           {
             "result": {
-              "duration": 10819116000,
+              "duration": 10638444500,
               "status": "passed"
             },
-            "line": 32,
+            "line": 33,
             "name": "I select \"Python\" Book From \"Data\" category of browse menu",
             "match": {
               "arguments": [
@@ -162,10 +163,10 @@
           },
           {
             "result": {
-              "duration": 1014862400,
+              "duration": 653698000,
               "status": "passed"
             },
-            "line": 33,
+            "line": 34,
             "name": "I will be navigated to search result page of \"Book\" Product and \"Data\" category for \"Python\" page",
             "match": {
               "arguments": [
@@ -180,6 +181,124 @@
                 {
                   "val": "\"Python\"",
                   "offset": 84
+                }
+              ],
+              "location": "PacktBooksAndVideosLibSteps.iWillBeNavigatedToSearchResultPageOfProductAndCategoryForPage(String,String,String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@tag1"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2987683400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestRunner.setUpReporting(Scenario)"
+            }
+          }
+        ],
+        "line": 38,
+        "name": "Verify that all the options from the Browse menu go to correct pages",
+        "description": "",
+        "id": "packt-assessment-sateesh-varma;verify-that-all-the-options-from-the-browse-menu-go-to-correct-pages;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 378359300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestRunner.endSession()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 2643979200,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I am on home page of packt application",
+            "match": {
+              "location": "PacktHomePageSteps.iAmOnHomePageOfPacktApplication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 133315500,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I click on \"Browse\" top menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Browse\"",
+                  "offset": 11
+                }
+              ],
+              "location": "PacktHomePageSteps.iClickOnTopMenu(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10489251800,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I select \"JavaScript\" Book From \"Web Development\" category of browse menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"JavaScript\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"Web Development\"",
+                  "offset": 32
+                }
+              ],
+              "location": "PacktHomePageSteps.iSelectBookFromCategoryOfBrowseMenu(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 617439800,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I will be navigated to search result page of \"Book\" Product and \"Web development\" category for \"JavaScript\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Book\"",
+                  "offset": 45
+                },
+                {
+                  "val": "\"Web development\"",
+                  "offset": 64
+                },
+                {
+                  "val": "\"JavaScript\"",
+                  "offset": 95
                 }
               ],
               "location": "PacktBooksAndVideosLibSteps.iWillBeNavigatedToSearchResultPageOfProductAndCategoryForPage(String,String,String)"

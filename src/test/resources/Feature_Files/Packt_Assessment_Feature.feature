@@ -25,11 +25,24 @@ Feature: Packt Assessment Sateesh Varma
     When I verify the elements on homepage
 		Then verification should be successfull
 		
+		# For this below scenario please provide the data input text matching same as on UI(Case sensitive)
 	@tag1	
-	Scenario: Verify that all the options from the Browse menu go to correct pages
+		Scenario Outline: Verify that all the options from the Browse menu go to correct pages
 		Given I am on home page of packt application
-		And I click on "Browse" top menu
-		When I select "Python" Book From "Data" category of browse menu
-		Then I will be navigated to search result page of "Book" Product and "Data" category for "Python" page
+		And I click on "<top_menu>" top menu
+		When I select "<book_name>" Book From "<category_name>" category of browse menu
+		Then I will be navigated to search result page of "<navigate_product>" Product and "<navigate_category>" category for "<search_text>" page
+		Examples:
+		| top_menu | book_name | category_name | navigate_product | navigate_category |search_text |
+		| Browse | Python | Data | Book | Data |Python |
+		| Browse | JavaScript | Web Development | Book | Web development |JavaScript |
+		
+		
+#	@tag1	
+#	Scenario: Verify that all the options from the Browse menu go to correct pages
+#		Given I am on home page of packt application
+#		And I click on "Browse" top menu
+#		When I select "Python" Book From "Data" category of browse menu
+#		Then I will be navigated to search result page of "Book" Product and "Data" category for "Python" page
 		
 

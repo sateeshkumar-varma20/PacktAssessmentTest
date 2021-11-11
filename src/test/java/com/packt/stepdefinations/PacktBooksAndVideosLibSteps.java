@@ -29,11 +29,12 @@ public class PacktBooksAndVideosLibSteps extends PacktBooksAndVideosSearchLibrar
 	
 	@Then("I will be navigated to search result page of {string} Product and {string} category for {string} page")
 	public void iWillBeNavigatedToSearchResultPageOfProductAndCategoryForPage(String productType, String category, String searchText) {
-	    // Write code here that turns the phrase above into concrete actions
-		
+
 		String currentWindow = driver.getWindowHandle();
-	    Assertions.assertTrue(checkIfElementIsChecked(getWebElementByXpath(getPRODUCT_BOOK_FILTER_CHECKBOX_XPATH())), "Product type Book is not checked");
-	    Assertions.assertTrue(checkIfElementIsChecked(getWebElementByXpath(getCATEGORY_DATA_FILTER_CHECKBOX_XPATH())), "Category Data is not checked");
+		
+		
+	    Assertions.assertTrue(checkIfElementIsChecked(getWebElementByXpath(getProductCheckXpaths(productType))), "Product type "+productType+" is not checked");
+	    Assertions.assertTrue(checkIfElementIsChecked(getWebElementByXpath(getCategoryCheckXpaths(category))), "Category "+category+" is not checked");
 	    
 	    List<WebElement> searchResultElements = getWebElementsByXpath(getSearchResultXpath(searchText));
 	    
