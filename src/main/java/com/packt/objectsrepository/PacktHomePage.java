@@ -13,9 +13,7 @@ public class PacktHomePage extends ExtendedSeleniunApi {
 	
 	private final String MAIN_LOGO_ID = "main-logo";
 	private final String TOP_SEARCH_BAR_XPATH = "//input[@class='search-bar__input']";
-//	private final String BROWSE_MENU_XPATH = "//li[@class='menu__item']//span[contains(text(),'Browse')]" ;
-//	private final String MYLIBRARY_MENU_XPATH = "//li[@class='menu__item']//span[contains(text(),'Library')]" ;
-//	private final String ACCOUNT_MENU_XPATH = "//li[@class='menu__item']//span[contains(text(),'Account')]" ;
+
 	private final String READ_NOW_BUTTON_XPATH = "//button[text()='Read now']";
 	private final String CHAPTERS_LIST_XPATH = "//div[starts-with(@class,'chapterList shadow')]";
 	
@@ -24,6 +22,12 @@ public class PacktHomePage extends ExtendedSeleniunApi {
 	private String browseMenuOptions = " //div//span[text()='menu_name']";
 	private String topMenuOptions = "//li[@class='menu__item']//span[contains(text(),'top_menu_name')]";
 	
+	private String yourSuggestedTitleXpath = "//div[text()='main_title']";
+//	private String youSuggestionSubTitleXpath = "//div[@class='collapse show']//a[text()='subtitle']";
+	
+//	private String yourSuggestedSubTitlesXpath = "//div[contains(text(),'main_title')]/../../following-sibling::div[@class='collapse show']//div/p/a";
+	private String yourSuggestedSubTitlesXpath = "//div[text()='main_title']/../../following-sibling::div[@class='collapse show']//div/p/a";
+	
 	
 	public String getMAIN_LOGO_ID() {
 		return MAIN_LOGO_ID;
@@ -31,15 +35,6 @@ public class PacktHomePage extends ExtendedSeleniunApi {
 	public String getTOP_SEARCH_BAR_XPATH() {
 		return TOP_SEARCH_BAR_XPATH;
 	}
-//	public String getBROWSE_MENU_XPATH() {
-//		return BROWSE_MENU_XPATH;
-//	}
-//	public String getMYLIBRARY_MENU_XPATH() {
-//		return MYLIBRARY_MENU_XPATH;
-//	}
-//	public String getACCOUNT_MENU_XPATH() {
-//		return ACCOUNT_MENU_XPATH;
-//	}
 	
 	
 	public String getREAD_NOW_BUTTON_XPATH() {
@@ -52,18 +47,6 @@ public class PacktHomePage extends ExtendedSeleniunApi {
 		return LOGOUT_LIST_BUTTON_XPATH;
 	}
 	
-	
-//	public void clickAccountMenu() {
-//		clickOnElement(getWebElementByXpath(ACCOUNT_MENU_XPATH), "Account Menu",true);
-//	}
-//	
-//	public void clickBrowseMenu() {
-//		clickOnElement(getWebElementByXpath(BROWSE_MENU_XPATH), "Browse Menu",true);
-//	}
-//	
-//	public void clickMyLibraryMenu() {
-//		clickOnElement(getWebElementByXpath(MYLIBRARY_MENU_XPATH), "My Library Menu",true);
-//	}
 	
 	public void clickLogOut() {
 		clickOnElement(getWebElementByXpath(LOGOUT_LIST_BUTTON_XPATH), "Logout");
@@ -82,6 +65,18 @@ public class PacktHomePage extends ExtendedSeleniunApi {
 	
 	public void clickTopMenu(String topMenuName) {
 		clickOnElement(getWebElementByXpath(getTopMenuOptionsXpath(topMenuName)), topMenuName+" from Top Menu");
+	}
+
+	public String getYourSuggestedTitleXpath(String titleName) {
+		return yourSuggestedTitleXpath.replaceAll("main_title", titleName);
+	}
+	
+//	public String getYouSuggestionSubTitleXpath(String subTitle) {
+//		return youSuggestionSubTitleXpath.replace("subtitle", subTitle);
+//	}
+	
+	public String getYourSuggestedSubTitlesXpath(String mainTitle) {
+		return yourSuggestedSubTitlesXpath.replace("main_title", mainTitle);
 	}
 	
 }

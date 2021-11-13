@@ -81,9 +81,9 @@ public class ReportGenerator {
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
 		 htmlReporter.config().setChartVisibilityOnOpen(true);
 		 htmlReporter.config().setTheme(Theme.DARK);
-		 htmlReporter.config().setDocumentTitle("Connect Forensic Automation Report");
+		 htmlReporter.config().setDocumentTitle("Packt Automation Assigment");
 		 htmlReporter.config().setEncoding("utf-8");
-		 htmlReporter.config().setReportName("Connect Forensic Automation Test Report");
+		 htmlReporter.config().setReportName("Packt Automation Assigment Test Report");
 		 
 
 	}

@@ -25,9 +25,9 @@ Feature: Packt Assessment Sateesh Varma
     When I verify the elements on homepage
 		Then verification should be successfull
 		
-		# For this below scenario please provide the data input text matching same as on UI(Case sensitive)
+ #For this below scenario please provide the data input text matching same as on UI(Case sensitive)
 	@tag1	
-		Scenario Outline: Verify that all the options from the Browse menu go to correct pages
+	Scenario Outline: Verify that all the options from the Browse menu go to correct pages
 		Given I am on home page of packt application
 		And I click on "<top_menu>" top menu
 		When I select "<book_name>" Book From "<category_name>" category of browse menu
@@ -36,6 +36,13 @@ Feature: Packt Assessment Sateesh Varma
 		| top_menu | book_name | category_name | navigate_product | navigate_category |search_text |
 		| Browse | Python | Data | Book | Data |Python |
 		| Browse | JavaScript | Web Development | Book | Web development |JavaScript |
+		
+# I have just written small wrapper to check the 1st value of main title. To validate the all the values of title can create excelsheet for data input.
+	@tag1
+  Scenario: Verify that Your Suggested Title section populated correct data as per main title
+    Given I am on home page of packt application
+    When I click "Current Status of Python" title of your suggested title
+		Then Subtiles contain "Current Status of Python" of main title "Current Status of Python"
 		
 		
 #	@tag1	

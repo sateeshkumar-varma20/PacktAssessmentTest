@@ -2,6 +2,7 @@ package com.packt.stepdefinations;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 
@@ -193,6 +194,30 @@ public class PacktHomePageSteps extends PacktHomePage {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	@When("I click {string} title of your suggested title")
+	public void iClickTitleOfYourSuggestedTitle(String mainTitle) {
+		scrollDownPage();
+		List <WebElement> element =driver.findElements(By.xpath(getYourSuggestedTitleXpath(mainTitle)));
+		clickOnElement(element.get(0), mainTitle+"title", true);
+	}
+
+	
+	@Then("Subtiles contain {string} of main title {string}")
+	public void subtilesContainOfMainTitle(String subTitle, String mainTitle) {
+	    // Write code here that turns the phrase above into concrete actions
+		 List <WebElement> subTitles = getWebElementsByXpath(getYourSuggestedSubTitlesXpath(mainTitle));
+		 
+		 String actualSubTitle = subTitles.get(0).getText();
+		 Assertions.assertEquals(subTitle, actualSubTitle, "Main title '"+mainTitle+" contains "+actualSubTitle+" instead of "+subTitle);
+		 
+		 String allSubtitles = "";
+		 for(WebElement element:subTitles) {
+			 allSubtitles= allSubtitles+ ", "+element.getText();
+		 }
+		 
+		 report.pass("All Sub titles of "+mainTitle+" are:"+allSubtitles, true);
 	}
 
 }

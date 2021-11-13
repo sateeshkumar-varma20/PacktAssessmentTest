@@ -96,7 +96,7 @@ public class ExtendedSeleniunApi {
 	 */
 	public WebElement getWebElementByXpath(String elementXpath) {
 		try {
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath)));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(elementXpath)));
 			return driver.findElement(By.xpath(elementXpath));
 		} catch (Exception e) {
 			report.fail(e.getMessage());
@@ -108,7 +108,7 @@ public class ExtendedSeleniunApi {
 	
 	public List<WebElement> getWebElementsByXpath(String elementXpath) {
 		try {
-			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(elementXpath)));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(elementXpath)));
 			return driver.findElements(By.xpath(elementXpath));
 		} catch (Exception e) {
 			report.fail(e.getMessage());
@@ -270,5 +270,10 @@ public class ExtendedSeleniunApi {
 			report.fail(e.getMessage());
 			return false;
 		}
+	}
+	
+	public void scrollDownPage() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 	}
 }

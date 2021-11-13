@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-11T19:35:46 IST" name="Suite" finished-at="2021-11-11T19:37:36 IST" duration-ms="109466">
+  <suite started-at="2021-11-13T13:29:58 IST" name="Suite" finished-at="2021-11-13T13:31:16 IST" duration-ms="78424">
     <groups>
       <group name="cucumber">
         <method signature="CustomAbtractBaseTestNGCucumber.runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" name="runScenario" class="com.packt.cucumber.CustomAbtractBaseTestNGCucumber"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2021-11-11T19:35:46 IST" name="Test" finished-at="2021-11-11T19:37:36 IST" duration-ms="109466">
+    <test started-at="2021-11-13T13:29:58 IST" name="Test" finished-at="2021-11-13T13:31:16 IST" duration-ms="78424">
       <class name="com.packt.testrunner.TestRunner">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-11T19:35:46 IST" name="setUpClass" finished-at="2021-11-11T19:35:57 IST" duration-ms="10533" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-13T13:29:58 IST" name="setUpClass" finished-at="2021-11-13T13:30:08 IST" duration-ms="9634" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-11T19:35:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-11T19:36:48 IST" duration-ms="50767" status="FAIL">
+        <test-method signature="runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-13T13:30:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-13T13:30:30 IST" duration-ms="21827" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -29,14 +29,14 @@
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected location of Read now is coordinates(653, 205) but recieved:(653, 619)]]>
+              <![CDATA[Expected location of Account menu is coordinates(1217, 28) but recieved:(1218, 26)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Expected location of Read now is coordinates(653, 205) but recieved:(653, 619)
+              <![CDATA[java.lang.AssertionError: Expected location of Account menu is coordinates(1217, 28) but recieved:(1218, 26)
 at org.testng.Assert.fail(Assert.java:99)
 at com.packt.utils.ReportGenerator.fail(ReportGenerator.java:145)
 at com.packt.utils.Assertions.assertEquals(Assertions.java:23)
-at com.packt.stepdefinations.PacktHomePageSteps.iVerifyTheElementsOnHomepage(PacktHomePageSteps.java:135)
+at com.packt.stepdefinations.PacktHomePageSteps.iVerifyTheElementsOnHomepage(PacktHomePageSteps.java:120)
 at ✽.I verify the elements on homepage(file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature:25)
 ]]>
             </full-stacktrace>
@@ -44,7 +44,7 @@ at ✽.I verify the elements on homepage(file:src/test/resources/Feature_Files/P
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-11T19:36:48 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-11T19:37:18 IST" duration-ms="30695" status="PASS">
+        <test-method signature="runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-13T13:30:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-13T13:30:48 IST" duration-ms="18371" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -60,7 +60,7 @@ at ✽.I verify the elements on homepage(file:src/test/resources/Feature_Files/P
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-11T19:37:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-11T19:37:36 IST" duration-ms="17254" status="PASS">
+        <test-method signature="runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-13T13:30:48 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-13T13:31:07 IST" duration-ms="18665" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -76,7 +76,23 @@ at ✽.I verify the elements on homepage(file:src/test/resources/Feature_Files/P
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-11T19:37:36 IST" name="tearDownClass" finished-at="2021-11-11T19:37:36 IST" duration-ms="119" status="PASS">
+        <test-method signature="runScenario(cucumber.api.testng.PickleEventWrapper,cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-13T13:31:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-13T13:31:16 IST" duration-ms="9625" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify that Your Suggested Title section populated correct data as per main title"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Packt Assessment Sateesh Varma"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.packt.testrunner.TestRunner@23941fb4]" started-at="2021-11-13T13:31:16 IST" name="tearDownClass" finished-at="2021-11-13T13:31:16 IST" duration-ms="135" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
