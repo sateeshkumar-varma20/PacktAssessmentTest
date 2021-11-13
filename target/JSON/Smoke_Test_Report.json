@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 2119840200,
+              "duration": 1446612400,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 975133100,
+              "duration": 704669300,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 16855619200,
+              "duration": 15848261300,
               "status": "passed"
             },
             "line": 24,
@@ -47,7 +47,7 @@
           {
             "result": {
               "error_message": "java.lang.AssertionError: Expected location of Account menu is coordinates(1217, 28) but recieved:(1218, 26)\r\n\tat org.testng.Assert.fail(Assert.java:99)\r\n\tat com.packt.utils.ReportGenerator.fail(ReportGenerator.java:145)\r\n\tat com.packt.utils.Assertions.assertEquals(Assertions.java:23)\r\n\tat com.packt.stepdefinations.PacktHomePageSteps.iVerifyTheElementsOnHomepage(PacktHomePageSteps.java:120)\r\n\tat ✽.I verify the elements on homepage(file:src/test/resources/Feature_Files/Packt_Assessment_Feature.feature:25)\r\n",
-              "duration": 1482609700,
+              "duration": 860640900,
               "status": "failed"
             },
             "line": 25,
@@ -59,7 +59,7 @@
           },
           {
             "result": {
-              "duration": 15500,
+              "duration": 5600,
               "status": "skipped"
             },
             "line": 26,
@@ -83,7 +83,7 @@
         "before": [
           {
             "result": {
-              "duration": 3314692200,
+              "duration": 3306800100,
               "status": "passed"
             },
             "match": {
@@ -98,7 +98,7 @@
         "after": [
           {
             "result": {
-              "duration": 581921200,
+              "duration": 351537400,
               "status": "passed"
             },
             "match": {
@@ -111,7 +111,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2929581000,
+              "duration": 2617114200,
               "status": "passed"
             },
             "line": 31,
@@ -123,7 +123,7 @@
           },
           {
             "result": {
-              "duration": 231940100,
+              "duration": 111196400,
               "status": "passed"
             },
             "line": 32,
@@ -141,7 +141,7 @@
           },
           {
             "result": {
-              "duration": 10779612100,
+              "duration": 10549791700,
               "status": "passed"
             },
             "line": 33,
@@ -163,7 +163,7 @@
           },
           {
             "result": {
-              "duration": 509023900,
+              "duration": 339039100,
               "status": "passed"
             },
             "line": 34,
@@ -201,7 +201,7 @@
         "before": [
           {
             "result": {
-              "duration": 3709078700,
+              "duration": 3722375900,
               "status": "passed"
             },
             "match": {
@@ -216,7 +216,7 @@
         "after": [
           {
             "result": {
-              "duration": 554905600,
+              "duration": 333087100,
               "status": "passed"
             },
             "match": {
@@ -229,7 +229,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2824791900,
+              "duration": 2390515100,
               "status": "passed"
             },
             "line": 31,
@@ -241,7 +241,7 @@
           },
           {
             "result": {
-              "duration": 276285100,
+              "duration": 110893700,
               "status": "passed"
             },
             "line": 32,
@@ -259,7 +259,7 @@
           },
           {
             "result": {
-              "duration": 10782284300,
+              "duration": 10538560500,
               "status": "passed"
             },
             "line": 33,
@@ -281,7 +281,7 @@
           },
           {
             "result": {
-              "duration": 509364800,
+              "duration": 340290000,
               "status": "passed"
             },
             "line": 34,
@@ -319,7 +319,7 @@
         "before": [
           {
             "result": {
-              "duration": 4111330800,
+              "duration": 3105851300,
               "status": "passed"
             },
             "match": {
@@ -334,7 +334,7 @@
         "after": [
           {
             "result": {
-              "duration": 515562000,
+              "duration": 373995800,
               "status": "passed"
             },
             "match": {
@@ -347,7 +347,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2360413900,
+              "duration": 2630792100,
               "status": "passed"
             },
             "line": 43,
@@ -359,7 +359,7 @@
           },
           {
             "result": {
-              "duration": 2143020500,
+              "duration": 2799112900,
               "status": "passed"
             },
             "line": 44,
@@ -377,7 +377,7 @@
           },
           {
             "result": {
-              "duration": 490481500,
+              "duration": 290502800,
               "status": "passed"
             },
             "line": 45,
@@ -395,6 +395,152 @@
               ],
               "location": "PacktHomePageSteps.subtilesContainOfMainTitle(String,String)"
             },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@tag1"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3515308500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestRunner.setUpReporting(Scenario)"
+            }
+          }
+        ],
+        "line": 48,
+        "name": "Verify that user s able to search the details and get valid results",
+        "description": "",
+        "id": "packt-assessment-sateesh-varma;verify-that-user-s-able-to-search-the-details-and-get-valid-results",
+        "after": [
+          {
+            "result": {
+              "duration": 408708200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestRunner.endSession()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2724052500,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "I am on home page of packt application",
+            "match": {
+              "location": "PacktHomePageSteps.iAmOnHomePageOfPacktApplication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 131453800,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "I click on \"Browse\" top menu",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Browse\"",
+                  "offset": 11
+                }
+              ],
+              "location": "PacktHomePageSteps.iClickOnTopMenu(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 139101400,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "I click on View all Books menu",
+            "match": {
+              "location": "PacktHomePageSteps.iClickOnViewAllBooksMenu()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2078806500,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "I will be navigated to Search programming and development ebooks and videos page",
+            "match": {
+              "location": "PacktBooksAndVideosLibSteps.iWillBeNavigatedToSearchProgrammingAndDevelopmentEbooksAndVideosPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 128642000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "I clear all the filters",
+            "match": {
+              "location": "PacktBooksAndVideosLibSteps.iClearAllTheFilters()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 259175500,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "I set year to \"2021\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2021\"",
+                  "offset": 14
+                }
+              ],
+              "location": "PacktBooksAndVideosLibSteps.iSetYearTo(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3184126200,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "I search for following texts and verify results",
+            "match": {
+              "location": "PacktBooksAndVideosLibSteps.iSearchForFollowingTextsAndVerifyResults(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Python",
+                  "Paint",
+                  "Secure",
+                  "Tableau"
+                ]
+              }
+            ],
             "keyword": "Then "
           }
         ],

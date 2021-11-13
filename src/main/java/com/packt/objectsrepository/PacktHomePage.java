@@ -18,6 +18,7 @@ public class PacktHomePage extends ExtendedSeleniunApi {
 	private final String CHAPTERS_LIST_XPATH = "//div[starts-with(@class,'chapterList shadow')]";
 	
 	private final String LOGOUT_LIST_BUTTON_XPATH = "//li[text()='Logout']";
+	private final String VIEW_ALL_BOOKS_XPATH = "//li[@class='menu__item']//li[contains(normalize-space(),'View All Books')]";
 	
 	private String browseMenuOptions = " //div//span[text()='menu_name']";
 	private String topMenuOptions = "//li[@class='menu__item']//span[contains(text(),'top_menu_name')]";
@@ -46,8 +47,10 @@ public class PacktHomePage extends ExtendedSeleniunApi {
 	public String getLOGOUT_LIST_BUTTON_XPATH() {
 		return LOGOUT_LIST_BUTTON_XPATH;
 	}
-	
-	
+
+	public String getVIEW_ALL_BOOKS_XPATH() {
+		return VIEW_ALL_BOOKS_XPATH;
+	}
 	public void clickLogOut() {
 		clickOnElement(getWebElementByXpath(LOGOUT_LIST_BUTTON_XPATH), "Logout");
 	}
@@ -77,6 +80,10 @@ public class PacktHomePage extends ExtendedSeleniunApi {
 	
 	public String getYourSuggestedSubTitlesXpath(String mainTitle) {
 		return yourSuggestedSubTitlesXpath.replace("main_title", mainTitle);
+	}
+	
+	public void clickViewAllBooks() {
+		clickOnElement(getWebElementByXpath(VIEW_ALL_BOOKS_XPATH), "View All Books menu");
 	}
 	
 }

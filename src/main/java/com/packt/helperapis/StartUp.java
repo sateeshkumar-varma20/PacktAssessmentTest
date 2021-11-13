@@ -40,7 +40,7 @@ public class StartUp extends ExtendedSeleniunApi{
 //			driver.get("chrome://settings/clearBrowserData");
 //			driver.findElement(By.xpath("//settings-ui")).sendKeys(Keys.ENTER);	 // This will clear the cache of application to avoid any failure in case of session is not stopped from previous execution.
 			report.info("Launch URL: "+url, false);
-			driver.navigate().to(url);
+			driver.get(url);
 			driver.manage().window().maximize();
 		} catch (Exception e) {
 			e.printStackTrace();

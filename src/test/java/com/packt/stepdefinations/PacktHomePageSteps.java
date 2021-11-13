@@ -219,5 +219,12 @@ public class PacktHomePageSteps extends PacktHomePage {
 		 
 		 report.pass("All Sub titles of "+mainTitle+" are:"+allSubtitles, true);
 	}
+	
+	@Given("I click on View all Books menu")
+	public void iClickOnViewAllBooksMenu() {
+		String parrentWindow = driver.getWindowHandle();
+		clickViewAllBooks();
+		switchToChildWindowFromParrent(parrentWindow);
+	}
 
 }

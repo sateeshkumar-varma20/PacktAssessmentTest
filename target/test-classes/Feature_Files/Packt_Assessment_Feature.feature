@@ -37,19 +37,23 @@ Feature: Packt Assessment Sateesh Varma
 		| Browse | Python | Data | Book | Data |Python |
 		| Browse | JavaScript | Web Development | Book | Web development |JavaScript |
 		
-# I have just written small wrapper to check the 1st value of main title. To validate the all the values of title can create excelsheet for data input.
+ #I have just written small wrapper to check the 1st value of main title. To validate the all the values of title can create excelsheet for data input.
 	@tag1
   Scenario: Verify that Your Suggested Title section populated correct data as per main title
     Given I am on home page of packt application
     When I click "Current Status of Python" title of your suggested title
 		Then Subtiles contain "Current Status of Python" of main title "Current Status of Python"
 		
+	@tag1
+	Scenario: Verify that user s able to search the details and get valid results
+		Given I am on home page of packt application
+    And I click on "Browse" top menu
+		And I click on View all Books menu
+		Then I will be navigated to Search programming and development ebooks and videos page
+		When I clear all the filters
+		And I set year to "2021"
+		Then I search for following texts and verify results
+		|Python|Paint|Secure|Tableau|
 		
-#	@tag1	
-#	Scenario: Verify that all the options from the Browse menu go to correct pages
-#		Given I am on home page of packt application
-#		And I click on "Browse" top menu
-#		When I select "Python" Book From "Data" category of browse menu
-#		Then I will be navigated to search result page of "Book" Product and "Data" category for "Python" page
 		
 

@@ -144,6 +144,18 @@ public class ExtendedSeleniunApi {
 			report.fail(e.getMessage());
 		}
 	}
+	
+	public void clearTextBox(WebElement element) {
+		try {
+
+			element.clear();
+
+		} catch (StaleElementReferenceException e) {
+		} catch (Exception e) {
+			report.fail(e.getMessage());
+		}
+	
+	}
 
 	/*
 	 * Get text of element
